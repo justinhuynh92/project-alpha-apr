@@ -13,6 +13,7 @@ class Task(models.Model):
         Project,
         related_name="tasks",
         on_delete=models.CASCADE,
+        null=True,
     )
     assignee = models.ForeignKey(
         settings.AUTH_USER_MODEL,
